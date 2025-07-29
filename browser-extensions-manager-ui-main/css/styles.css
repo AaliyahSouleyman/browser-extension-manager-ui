@@ -269,3 +269,40 @@ input:checked + label::before {
 input {
     appearance: none;
 }
+
+@media only screen and (max-width: 375px){
+
+    #site-container {
+    max-width: 95%;
+       width: 375px;
+    }
+
+    #card-container {
+        display: block;
+        
+    }
+
+    .card {
+        margin: 10px 0;
+    }
+   
+    #extension-list-manager {
+        text-align: center;
+        display: block;
+        
+    }
+
+    #extension-list-manager h1 {
+        font-size: 28px;
+    }
+
+    #filter-list {
+        
+        display: flex;
+        padding: 0 15px;
+           
+    }
+
+   
+    
+}
