@@ -1,0 +1,271 @@
+/* Custom Properties 
+
+DARK THEME : 
+
+SITE BACKGROUND : - **Neutral 900**: `hsl(227, 75%, 14%)`
+CARD BACKGROUND : - **Neutral 800**: `hsl(226, 25%, 17%)`
+BUTTON BACKGROUND : - **Neutral 700**: `hsl(225, 23%, 24%)`
+HOVER STATE AND TOGGLE : - **Neutral 600**: `hsl(226, 11%, 37%)`
+
+
+
+
+LIGHT THEME 
+
+TOGGLE : - **Neutral 300**: `hsl(0, 0%, 78%)`
+BACKGROUND: - **Neutral 200**: `hsl(217, 61%, 90%)`
+FOCUS : - **Neutral 100**: `hsl(0, 0%, 93%)`
+CARD BACKGROUND : **Neutral 0**: `hsl(200, 60%, 99%)`
+
+
+RED 
+
+DARK TOGGLE ACTIVE : - **Red 400**: `hsl(3, 86%, 64%)`
+LIGHT TOGGLE ACTIVE : - **Red 700**: `hsl(3, 77%, 44%)`
+
+
+
+*/
+:root {
+    --background-gradient: linear-gradient(180deg, #EBF2FC 0%, #EEF8F9 100%);
+    --card-header-btn-bg: hsl(200, 60%, 99%);
+    --toggle-btn-active: hsl(3, 77%, 44%);
+    --card-btn-header: hsl(227, 75%, 14%);
+    --theme-btn: hsl(0, 0%, 93%);
+    --card-p: hsl(226, 11%, 37%);
+    --btn-border: hsl(0, 0%, 93%);
+    --toggle-gray: hsl(0, 0%, 78%);
+    --opacity: 0.6;
+    --btn-hover: hsl(200, 60%, 99%);
+    
+
+    
+
+}
+
+.darkmode {
+    --background-gradient: linear-gradient(180deg, #040918 0%, #091540 100%);
+    --card-header-btn-bg: hsl(226, 25%, 17%);
+    --theme-btn: hsl(225, 23%, 24%);
+    --card-btn-header: hsl(200, 60%, 99%);
+    --toggle-btn-active: hsl(3, 86%, 64%);
+    --card-p: hsl(0, 0%, 78%);
+    --btn-border: hsl(225, 23%, 24%);
+    --toggle-gray: hsl(226, 11%, 37%);
+    --opacity: 1;
+    --btn-hover: hsl(226, 11%, 37%);
+    
+    /* --card-header-btn-bg: hsl(225, 23%, 24%); */
+}
+
+
+body {
+    
+    background: var(--background-gradient);
+    font-family : "Noto Sans", sans-serif;
+    font-weight: 500;
+    
+}
+
+#site-container {
+    max-width: 90%;
+    width: 1440px;
+    margin: auto;
+    
+}
+
+
+/* General Styles */
+
+.hidden, .remove {
+    display: none;
+}
+
+
+
+/* General Button Styles */
+
+button {
+    cursor: pointer;
+    border: none;
+    font-size: 16px;
+    
+}
+
+ul button, .card-buttons button {
+    border-radius: 15px;
+    padding: .5rem 1rem;
+}
+
+header button {
+    padding: 10px;
+}
+
+
+
+/* Header Styles */ 
+
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--card-header-btn-bg);
+    padding: .8rem;
+    border-radius: 10px;
+    margin: 2rem 0;
+    
+}
+
+
+
+button.theme  {
+    background-color: var(--theme-btn);
+    border-radius: 8px;
+    
+   
+}
+
+button.light:hover {
+    background-color: hsl(0, 0%, 80%);
+}
+
+button.dark:hover {
+    background-color: hsl(226, 11%, 37%);
+}
+
+
+#filter-list button:focus-visible, button.light:focus-visible, .card-buttons button:focus-visible, input:focus-visible + label {
+    outline: 2px solid var(--toggle-btn-active);
+    outline-offset: 2px;
+}
+
+/* Main Content */
+
+#extension-list-manager {
+    color: var(--card-btn-header);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+
+
+
+#filter-list li {
+    margin-right: 1rem;
+    display: inline-block;
+    
+}
+
+#filter-list button,  .card-buttons button { 
+    background-color: var(--card-header-btn-bg);
+    color: var(--card-btn-header);
+    
+}
+
+#filter-list button:hover {
+    opacity: var(--opacity);
+    background-color: var(--btn-hover);
+    
+}
+
+#filter-list button:active, .card-buttons button:hover {
+    opacity: 1;
+    color: white;
+    background-color: var(--toggle-btn-active);
+   
+}
+
+#filter-list button.current {
+    color: white;
+    background-color: var(--toggle-btn-active);
+}
+
+/* CARD STYLES */
+
+#card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: .75rem;
+    row-gap: 1rem;
+}
+
+
+.card {
+    padding: 1rem;
+    background-color: var(--card-header-btn-bg);
+    border-radius: 20px;
+  
+    
+   
+}
+
+.card-top-row  {
+    display: flex;
+    align-items: flex-start;
+}
+
+.card-top-row img {
+    margin-right: 1rem;
+}
+
+
+.card-top-row h2 {
+    color: var(--card-btn-header);
+    font-weight: 700;
+    font-size: 18px;
+   
+}
+
+.card-top-row p {
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--card-p);
+    
+}
+
+.card-buttons {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-buttons button {
+    border: 2px solid var(--btn-border);
+    color:  var(--card-btn-header);
+}
+
+
+
+label {
+    background-color: var(--toggle-gray);
+    height: 20px;
+    width: 40px;
+    border-radius: 200px;
+    position: relative;
+}
+
+label::before {
+    position: absolute;
+    content: '';
+    height: 16px;
+    width: 16px;
+    background-color: hsl(200, 60%, 99%);
+    border-radius: 200px;
+    margin: 2px;
+}
+
+input:checked + label {
+    background-color: var(--toggle-btn-active);
+}
+
+input:checked + label::before {
+    transform: translateX(20px);
+}
+
+
+
+input {
+    appearance: none;
+}

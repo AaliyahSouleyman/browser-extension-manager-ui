@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Overpass:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/styles.css">
+  
+  <title>Frontend Mentor | Browser extensions manager UI</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+  <div id="site-container">
+    <header>
+      <img src="assets/images/logo.svg" alt="">
+      <button class="light theme"><img src="assets/images/icon-moon.svg" alt=""></button>
+      <button class="dark theme hidden"><img src="assets/images/icon-sun.svg" alt=""></button>
+    </header>
+    
+    <main>
+      <div id="extension-list-manager">
+        <h1>Extensions List</h1>
+        <ul id="filter-list">
+          <li><button class='filter-btn current' id="allButton" type="button">All</button></li>
+          <li><button class='filter-btn' id='activeButton' type="button">Active</button></li>
+          <li><button class='filter-btn' id='inactiveButton' type="button">Inactive</button></li>
+        </ul>
+      </div>
+      <div id="card-container">
+      </div>
+    </main>
+  </div>
+
+  <!--
+    article.card 
+      div.extension-info-container
+        img.extension-logo
+        div.extension-info
+          h2
+          p 
+        div
+      div
+      div.extension-manager
+        button.remove
+        toggle switch
+      div
+    article
+  -->
+
+  <!-- If you plan to use the JSON file to populate the data dynamically, you can delete the content below -->
+
+  <!-- DevLens
+  Quickly inspect page layouts and visualize element boundaries.
+  Remove
+
+  StyleSpy
+  Instantly analyze and copy CSS from any webpage element.
+  Remove
+
+  SpeedBoost
+  Optimizes browser resource usage to accelerate page loading.
+  Remove
+
+  JSONWizard
+  Formats, validates, and prettifies JSON responses in-browser.
+  Remove
+
+  TabMaster Pro
+  Organizes browser tabs into groups and sessions.
+  Remove
+
+  ViewportBuddy
+  Simulates various screen resolutions directly within the browser.
+  Remove
+
+  Markup Notes
+  Enables annotation and notes directly onto webpages for collaborative debugging.
+  Remove
+
+  GridGuides
+  Overlay customizable grids and alignment guides on any webpage.
+  Remove
+
+  Palette Picker
+  Instantly extracts color palettes from any webpage.
+  Remove
+
+  LinkChecker
+  Scans and highlights broken links on any page.
+  Remove
+
+  DOM Snapshot
+  Capture and export DOM structures quickly.
+  Remove
+
+  ConsolePlus
+  Enhanced developer console with advanced filtering and logging.
+  Remove -->
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Coded by <a href="#">Aaliyah Souleyman</a>.
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>
